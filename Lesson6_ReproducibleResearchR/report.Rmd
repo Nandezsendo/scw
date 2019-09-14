@@ -1,0 +1,39 @@
+---
+title: "My First Markdown"
+author: "Cristian Hernandez"
+date: "9/14/2019"
+output: html_document
+---
+
+Bold - _**bold**_  
+Italic - _Italics_  
+Italics the other way - *Italics*
+
+# Title
+## Subtitle
+-Bullet list 1  
+-Bullet list 2  
+-Bullet list 3  
+
+### Section title  
+1. Ordered List 1
+1. Ordered List 2
+1. Ordered List 3  
+
+#### Subsection Title
+
+# ggplot
+ggplot is soooooo cool.... lol..
+
+```{r first_chunk}
+gapminder <- read.table("gapminder.txt", header = TRUE)
+head(gapminder)
+```
+```{r plot, fig.width=7, fig.height=5}
+library(ggplot2)
+ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(alpha = 0.5) 
+```
+
+
+
